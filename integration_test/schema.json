@@ -29,6 +29,13 @@
 		"type": "float",
 		"required": true,
 		"description": "The rate per mile payed to move the load"
+	},
+	{
+		"name": "data_date",
+		"type": "date",
+		"required": true,
+		"description": "The date the load occured on",
+		"format": "%Y-%m-%d"
 	}
 
 ]

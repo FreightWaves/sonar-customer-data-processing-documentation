@@ -1,4 +1,4 @@
-row_id,mode,origin_zip3,dest_zip3,rpm
-1,VAN,800,600,1.40
-2,REEFER,984,493,3.21
-3,FLATBED,301,234,4.01
+row_id,mode,origin_zip3,dest_zip3,rpm,data_date
+1,VAN,800,600,1.40,2024-01-01
+2,REEFER,984,493,3.21,2024-01-01
+3,FLATBED,301,234,4.01,2024-01-01
