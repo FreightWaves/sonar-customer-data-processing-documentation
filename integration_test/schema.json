@@ -1,41 +1,50 @@
 [
-	{
-		"name": "row_id",
-		"type": "integer",
-		"required": true,
-		"description": "The id for the row"
-	},
-	{
-		"name": "mode",
-		"type": "string",
-		"required": true,
-		"description": "The mode for the load that was moved",
-		"valid_values": ["VAN","REEFER","TANKER","FLATBED","INTERMODAL"]
-	},
-	{
-		"name": "origin_zip3",
-		"type": "string",
-		"required": true,
-		"description": "The zip3 the load originated in"
-	},
-	{
-		"name": "dest_zip3",
-		"type": "string",
-		"required": true,
-		"description": "The zip3 the load was delivered to"
-	},
-	{
-		"name": "rpm",
-		"type": "float",
-		"required": true,
-		"description": "The rate per mile payed to move the load"
-	},
-	{
-		"name": "data_date",
-		"type": "date",
-		"required": true,
-		"description": "The date the load occured on",
-		"format": "%Y-%m-%d"
-	}
-
+    {
+        "name": "row_id",
+        "type": "integer",
+        "required": true,
+        "description": "The id for the row",
+        "validation_method": "integer_validator"
+    },
+    {
+        "name": "mode",
+        "type": "string",
+        "required": true,
+        "description": "The mode for the load that was moved",
+        "valid_values": ["VAN","REEFER","TANKER","FLATBED","INTERMODAL"],
+        "validation_method": "string_valid_values"
+    },
+    {
+        "name": "origin_zip3",
+        "type": "string",
+        "required": true,
+        "description": "The zip3 the load originated in",
+        "min_length": 3,
+        "max_length": 5,
+        "validation_method": "string_length"
+    },
+    {
+        "name": "dest_zip3",
+        "type": "string",
+        "required": true,
+        "description": "The zip3 the load was delivered to",
+        "min_length": 3,
+        "max_length": 5,
+        "validation_method": "string_length"
+    },
+    {
+        "name": "rpm",
+        "type": "float",
+        "required": true,
+        "description": "The rate per mile payed to move the load",
+        "validation_method": "float_validator"
+    },
+    {
+        "name": "data_date",
+        "type": "date",
+        "required": true,
+        "description": "The date the load occured on",
+        "format": "%Y-%m-%d",
+        "validation_method": "string_date"
+    }
 ]
